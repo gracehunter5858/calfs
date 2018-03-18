@@ -1,0 +1,36 @@
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Cal Figure Skating</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+
+  <header class="p-2">
+    <a class="logo p-2" href="/team"><img src="media/California-FigureSkating-Gold-Transparent.png" width = 150px;></a>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="/team">Join</a>
+        <a class="p-2 text-dark" href="/team">About Us</a>
+        <a class="p-2 text-dark" href="/team">Our Team</a>
+        <a class="p-2 text-dark" href="/team">Gallery</a>
+        <a class="p-2 text-dark" href="/team">Contact</a>
+    </nav>
+  </header>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+{% block content %}
+{% endblock %}
+
+  <footer class="my-2 my-md-0 mr-md-3 p-2">
+    <p class="p-2 text-dark">Hosted by the OCF</p>
+  </footer>

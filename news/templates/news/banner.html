@@ -1,0 +1,26 @@
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/style.css' %}" />
+
+{% if events %}
+    {% for event in events %}
+        {% if event.display_on_site %}
+
+          {% if event.photo %} <img src = "/news{{ event.photo.url }}"> {% endif %}
+          <h1> {{ event.name }} </h1>
+
+          {% if event.date_display_format == "single date" or not event.end%}
+              <p> {{ event.start.date }} <p>
+          {% elif event.date_display_format == "date range" %}
+              <p> {{ event.start.date }} - {{ event.end.date }} <p>
+          {% endif %}
+
+          {% if event.time_display_format == "start time only" %}
+              <p> {{ event.start.time }} <p>
+          {% elif event.time_display_format == "time range" %}
+              <p> {{ event.start.time }} - {{ event.end.time }}<p>
+          {% endif %}
+
+        {% endif %}
+    {% endfor %}
+{% endif %}

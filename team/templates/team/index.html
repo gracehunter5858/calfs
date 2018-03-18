@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'team/style.css' %}" />
+
+<h1> Meet the Team </h1>
+
+{% if members %}
+    <div class = "member-card-grid p-2">
+
+    {% for member in members %}
+
+    <div class = "card mw-25 mh-25 text-center p-2 m-2">
+          {% if member.photo %} <img class = "member-photo" src = "/team{{ member.photo.url }}">
+          {% else %} <img class = "card-img-top member-photo" src = "{% static 'team/images/cone_of_shame.jpg' %}"/> {% endif %}
+          <div class = "card-body">
+              <h5 class = "card-title"> {{ member.name }} </h5>
+              <p class = "card-text"> {% if member.officer_position %} {{ member.get_officer_position_display }} {% endif %} </p>
+              <p class = "card-text"> Year: {{ member.get_year_display }} </p>
+              <p class = "card-text"> {% if member.major_1 %} Major: {{ member.major_1}}
+                {% if member.major_2 %} / {{ member.major_2}} {% endif %} {% endif %} </p>
+              <p class = "card-text"> {% if member.minor_1 %} Minor: {{ member.minor_1}}
+                {% if member.minor_2 %} / {{ member.minor_2}} {% endif %} {% endif %} </p>
+              <p class = "card-text"> {% if member.hometown %} {{ member.hometown }} {% endif %} </p>
+          </div>
+      </div>
+
+    {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}
