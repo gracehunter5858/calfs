@@ -3,7 +3,7 @@
 
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'team/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'team/css/style.css' %}" />
 
 <h1> Meet the Team </h1>
 
@@ -17,13 +17,17 @@
           {% else %} <img class = "card-img-top member-photo" src = "{% static 'team/images/cone_of_shame.jpg' %}"/> {% endif %}
           <div class = "card-body">
               <h5 class = "card-title"> {{ member.name }} </h5>
-              <p class = "card-text"> {% if member.officer_position %} {{ member.get_officer_position_display }} {% endif %} </p>
-              <p class = "card-text"> Year: {{ member.get_year_display }} </p>
-              <p class = "card-text"> {% if member.major_1 %} Major: {{ member.major_1}}
-                {% if member.major_2 %} / {{ member.major_2}} {% endif %} {% endif %} </p>
-              <p class = "card-text"> {% if member.minor_1 %} Minor: {{ member.minor_1}}
-                {% if member.minor_2 %} / {{ member.minor_2}} {% endif %} {% endif %} </p>
-              <p class = "card-text"> {% if member.hometown %} {{ member.hometown }} {% endif %} </p>
+              <p class = "card-subtitle"> {% if member.officer_position %} {{ member.get_officer_position_display }} {% endif %} </p>
+
+              <span class = "info-label">Year:</span><span class = "card-text">{{ member.get_year_display }}</span><br/>
+
+              {% if member.major_1 %}<span class = "info-label">Major:</span><span class = "card-text">{{ member.major_1}}
+                {% if member.major_2 %} / {{ member.major_2}} {% endif %} </span><br/>{% endif %}
+
+              {% if member.minor_1 %}<span class = "info-label">Minor</span><span class = "card-text">{{ member.minor_1}}
+                {% if member.minor_2 %} / {{ member.minor_2}} {% endif %} </span><br/>{% endif %}
+
+              {% if member.hometown %}<span class = "info-label">Hometown:</span><span class = "card-text">{{ member.hometown }} </span> {% endif %}
           </div>
       </div>
 

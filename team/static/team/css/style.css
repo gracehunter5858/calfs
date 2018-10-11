@@ -1,0 +1,51 @@
+/*** Colors ***/
+/*
+Cal Gold: #FEC52E
+Cal Blue: #191F2F
+Dark Gray: #424242
+Light Gray: #CECECE
+/*
+
+/*** Member Card Styles ***/
+
+.card {
+  border: none;
+  border-radius: 0;
+}
+
+.card-subtitle {
+  margin-bottom: 16px;
+}
+
+.info-label {
+  font-size: 14;
+  font-weight: bold;
+}
+
+.card-text {
+  margin: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 12px;
+}
+
+.member-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  max-width: 200px;
+  background: #CECECE;
+  line-height: 1em;
+}
+
+.member-photo {
+  max-width: 100%;
+}

@@ -10,16 +10,16 @@
   </head>
 
   {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
 
   <header class="p-2">
-    <a class="logo p-2" href="/team"><img src="media/California-FigureSkating-Gold-Transparent.png" width = 150px;></a>
+    <a class="logo p-2" href="/"><img src="{% static 'images/cal_figure_skating_gold_horizontal.png'%}" width="300px"></a>
     <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="/team">Join</a>
-        <a class="p-2 text-dark" href="/team">About Us</a>
-        <a class="p-2 text-dark" href="/team">Our Team</a>
-        <a class="p-2 text-dark" href="/team">Gallery</a>
-        <a class="p-2 text-dark" href="/team">Contact</a>
+        <a class="p-2 text-white" href="/join">Join</a>
+        <a class="p-2" href="/about">About Us</a>
+        <a class="p-2" href="/team">Our Team</a>
+        <a class="p-2" href="/gallery">Gallery</a>
+        <a class="p-2" href="/contact">Contact</a>
     </nav>
   </header>
 
@@ -31,6 +31,6 @@
 {% block content %}
 {% endblock %}
 
-  <footer class="my-2 my-md-0 mr-md-3 p-2">
-    <p class="p-2 text-dark">Hosted by the OCF</p>
+  <footer>
+    <p class="p-4 text-dark">Hosted by the OCF</p>
   </footer>

@@ -1,0 +1,43 @@
+
+/*** Colors ***/
+/*
+Cal Gold: #FEC52E
+Cal Blue: #191F2F
+Dark Gray: #424242
+Light Gray: #CECECE
+/*
+
+/*** Global Styles ***/
+
+h1 {
+  text-align: center;
+  margin: 0.5em;
+}
+
+/*** Nav Bar ***/
+
+header {
+  display: flex;
+  border-bottom: 2px solid #424242;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #191F2F;
+}
+
+nav a {
+  color: white;
+  font-size: 20;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid gray;
+}

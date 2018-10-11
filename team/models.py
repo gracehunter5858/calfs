@@ -30,7 +30,8 @@ class Member(models.Model):
         (3, 'Team Captain'),
         (4, 'Treasurer'),
         (5, 'PR Chair'),
-        (6, 'Fundraising Chair')
+        (6, 'Fundraising Chair'),
+        (7, 'Social/Rec Chair')
     )
     officer_position = models.IntegerField(choices = officer_choices, null = True, blank = True)
 
