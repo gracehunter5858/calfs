@@ -19,6 +19,8 @@ class Member(models.Model):
     minor_2 = models.CharField(max_length = 50, blank = True, default = '')
     hometown = models.CharField(max_length = 50, blank = True, default = '')
     photo = models.ImageField(upload_to = '', null = True, blank = True)
+    insta = models.CharField(max_length = 50, blank = True, null = True)
+    linkedin = models.CharField(max_length = 50, blank = True, null = True)
     officer_choices = (
         (1, 'President'),
         (2, 'Vice President'),

@@ -9,7 +9,7 @@ class MemberAdmin(admin.ModelAdmin):
     list_display = ('name', 'photo_uploaded')
     fields = (
         'name', 'year', ('major_1', 'major_2'), ('minor_1', 'minor_2'),
-        'hometown', 'photo', 'officer_position'
+        'hometown', 'photo', 'officer_position', 'insta', 'linkedin'
     )
 
 admin.site.register(Member, MemberAdmin)
