@@ -18,11 +18,6 @@ class Member(models.Model):
     minor_1 = models.CharField(max_length = 50, blank = True, default = '')
     minor_2 = models.CharField(max_length = 50, blank = True, default = '')
     hometown = models.CharField(max_length = 50, blank = True, default = '')
-    team_choices = (
-        ('Rec', 'Rec'),
-        ('Comp', 'Comp')
-    )
-    team = models.CharField(max_length = 20, choices = team_choices, default = 'Rec')
     photo = models.ImageField(upload_to = '', null = True, blank = True)
     officer_choices = (
         (1, 'President'),
@@ -37,3 +32,10 @@ class Member(models.Model):
 
     def __str__(self):
         return self.name
+
+    def photo_uploaded(self):
+        return self.photo != None
+    photo_uploaded.boolean = True
+
+
+    # These two auto-delete files from filesystem when they are unneeded:
