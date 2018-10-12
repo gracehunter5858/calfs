@@ -4,40 +4,64 @@
 Cal Gold: #FEC52E
 Cal Blue: #191F2F
 Dark Gray: #424242
-Light Gray: #CECECE
+Light Gray (almost white): #FAFAFA
 /*
 
 /*** Global Styles ***/
 
-h1 {
+body {
+  background-color: #FAFAFA;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h3 {
   text-align: center;
-  margin: 0.5em;
+  margin: 1.5em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: #222;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 /*** Nav Bar ***/
 
 header {
   display: flex;
-  border-bottom: 2px solid #424242;
+  border-bottom: 2px solid gray;
   align-items: center;
   justify-content: flex-end;
   background-color: #191F2F;
 }
 
 nav a {
-  color: white;
+  color: #FFFFFF;
   font-size: 20;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 nav a:hover {
-  color: white;
+  color: #FFFFFF;
 }
 
 .logo {
   margin-right: auto;
+  margin-left: 1em;
 }
 
 footer {
   text-align: center;
-  border-top: 1px solid gray;
+  border-top: 2px solid gray;
+  background-color: #191F2F;
+  padding: 1em;
+}
+
+footer p {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #E5E5E5;
 }

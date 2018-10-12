@@ -11,11 +11,12 @@
 
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed" rel="stylesheet">
 
-  <header class="p-2">
-    <a class="logo p-2" href="/"><img src="{% static 'images/cal_figure_skating_gold_horizontal.png'%}" width="300px"></a>
+  <header class="p-1">
+    <a class="logo p-2" href="/"><img src="{% static 'images/cal_figure_skating_gold_horizontal.png'%}" width="250px"></a>
     <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="/join">Join</a>
+        <a class="p-2" href="/join">Join</a>
         <a class="p-2" href="/about">About Us</a>
         <a class="p-2" href="/team">Our Team</a>
         <a class="p-2" href="/gallery">Gallery</a>
@@ -32,5 +33,5 @@
 {% endblock %}
 
   <footer>
-    <p class="p-4 text-dark">Hosted by the OCF</p>
+    <p class="p-4">Hosted by the OCF</p>
   </footer>

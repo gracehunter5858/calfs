@@ -4,7 +4,14 @@ Cal Gold: #FEC52E
 Cal Blue: #191F2F
 Dark Gray: #424242
 Light Gray: #CECECE
-/*
+*/
+
+.page-header {
+  background-image: url(../images/Test2.jpg);
+  background-position: center;
+  padding: 1em;
+}
+
 
 /*** Member Card Styles ***/
 
@@ -13,8 +20,13 @@ Light Gray: #CECECE
   border-radius: 0;
 }
 
+.card-title {
+  font-weight: bold;
+}
+
 .card-subtitle {
   margin-bottom: 16px;
+  font-weight: bold;
 }
 
 .info-label {
@@ -29,23 +41,26 @@ Light Gray: #CECECE
 }
 
 .card-body {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 12px;
+  padding: 1em;
 }
 
 .member-card-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: -0.5em;
+  background: #E5E5E5;
+  padding: 1.5em 0;
+  border-top: 2px solid gray;
 }
 
 .card {
   max-width: 200px;
-  background: #CECECE;
+  background: #FAFAFA;
   line-height: 1em;
 }
 
 .member-photo {
   max-width: 100%;
+  margin: 0;
 }
