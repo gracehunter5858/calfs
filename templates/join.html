@@ -1,7 +1,27 @@
 {% extends 'base.html' %}
-
 {% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/join.css' %}" />
 
   <h1> JOIN US </h1>
-
+  <div class="row grid">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">REC!!</h5>
+          <p class="card-text">hullo come sk8</p>
+          <a href="{% static 'Rec-Registration-Instructions.pdf'%}" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">COMP!!</h5>
+          <p class="card-text">hullo come compete</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
