@@ -1,0 +1,73 @@
+
+.container {
+  align-items: center;
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "contact signup"
+  "contact donate"
+  "contact .";
+  grid-gap: 3em;
+  max-width: 1000px;
+}
+
+.contact-form {
+  grid-area: contact;
+  background: #E5E5E5;
+  padding: 2em 2em;
+}
+
+#mc_embed_signup {
+  grid-area: signup;
+  margin: 0;
+}
+
+.donate {
+  grid-area: donate;
+  background: #E5E5E5;
+  padding: 2em 2em;
+}
+
+
+/*** Contact Form ***/
+
+.contact-form p label {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-form p input {
+  height: 2em;
+}
+
+.contact-form p input, form p textarea {
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.contact-form p input.btn {
+  color: red;
+}
+
+/*** Mailchimp Signup Form ***/
+
+#mc_embed_signup_scroll {
+  padding: 2em 1em;
+  width: 100%;
+  background: #E5E5E5;
+}
+
+#mc_embed_signup input.email {
+  height: 2.45em;
+  border: 1px solid gray;
+}
+
+#subscribe-input {
+  height: 50px;
+}
