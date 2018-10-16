@@ -1,9 +1,11 @@
-.grid {
-    padding: 0em 5em 10em 5em;
+.card-deck {
+    margin: 5em;
 }
 
 .card {
-  background: gray;
+  background: #CECECE;
+  border-radius: 0;
+  border: none;
   text-align: center;
   padding: 1em;
 }
