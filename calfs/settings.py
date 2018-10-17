@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'team.apps.TeamConfig',
+    'gallery.apps.GalleryConfig',
     'news.apps.NewsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

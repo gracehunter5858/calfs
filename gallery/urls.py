@@ -7,7 +7,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', views.team, name = 'team'),
+    path('', views.gallery, name = 'gallery'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

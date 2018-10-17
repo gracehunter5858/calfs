@@ -23,10 +23,9 @@ from django.conf import settings
 urlpatterns = [
     path('', views.home, name = 'home'),
     path('team/', include('team.urls')),
-    path('news/', include('news.urls')),
     path('join/', views.join, name = 'join'),
     path('about/', views.about, name = 'about'),
-    path('gallery/', views.gallery, name = 'gallery'),
+    path('gallery/', include('gallery.urls')),
     path('contact', views.contact, name = 'contact'),
     path('admin/', admin.site.urls),
 ]

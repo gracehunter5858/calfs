@@ -7,4 +7,4 @@ from .models import Event
 class EventAdmin(admin.ModelAdmin):
     list_display = ('name', 'start', 'end', 'display_on_site')
 
-admin.site.register(Event, EventAdmin)
+#admin.site.register(Event, EventAdmin)

@@ -38,6 +38,3 @@ class Member(models.Model):
     def photo_uploaded(self):
         return self.photo != None
     photo_uploaded.boolean = True
-
-
-    # These two auto-delete files from filesystem when they are unneeded:
