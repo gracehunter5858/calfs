@@ -6,7 +6,7 @@ from .models import Photo
 
 class PhotoAdmin(admin.ModelAdmin):
     fields = (
-        'image_file', 'show_in_gallery',
+        'image', 'show_in_gallery',
     )
 
 admin.site.register(Photo, PhotoAdmin)
