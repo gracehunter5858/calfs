@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_cleanup'
+    'django_cleanup',
+    'sorl.thumbnail'
 ]
 
 MIDDLEWARE = [

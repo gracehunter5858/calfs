@@ -5,8 +5,13 @@ from django.contrib import admin
 from .models import Photo
 
 class PhotoAdmin(admin.ModelAdmin):
+
     fields = (
         'image', 'show_in_gallery',
     )
 
+    list_display = (
+        'thumb', 'show_in_gallery'
+    )
+    
 admin.site.register(Photo, PhotoAdmin)
