@@ -2,16 +2,41 @@
 .about-page-body {
   display: flex;
   justify-content: center;
-  background: #EFEFEF;
+  background:  #FAFAFA;
 }
 
 .about-img {
-  height: 100%;
-  margin: 3em;;
+  height: 50vw;
+  margin: 3em;
 }
 
 .about-text {
   max-width: 35em;
-  align-self: center;
-  font-size: 18px;
+  align-self: top;
+  font-size: 16px;
+  margin: 2em 2em 2em 0;
+}
+
+.title {
+  margin: 1em 0;
+  font-size: 2em;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .about-page-body {
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: calc(100vw - 4em);
+    height: auto;
+    margin: 2em;
+    order: 2;
+  }
+
+  .about-text {
+    margin: 0 2em;
+    order: 1;
+  }
 }
