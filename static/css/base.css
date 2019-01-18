@@ -17,7 +17,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h3 {
+h1, h3, h4 {
   text-align: center;
   margin: 1.5em;
   font-family: 'Roboto Condensed', sans-serif;
@@ -30,9 +30,14 @@ h1 {
   font-size: 3em;
 }
 
+h4 {
+  font-size: 1.5em;
+}
+
 .btn-primary {
   border: none;
-  background-color: #424242;
+  background-color: #191F2F;
+  border-radius: 2px;
 }
 
 .btn-primary:hover {

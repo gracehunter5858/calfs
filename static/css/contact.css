@@ -1,38 +1,42 @@
 
+.title {
+  font-size: 2em;
+  text-align: left;
+}
+
+h4 {
+  text-align: left;
+  margin: 0 0 1em 0;
+}
+
+.btn {
+  margin-top: 2em;
+}
+
 .form-grid {
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  "contact signup"
-  "contact donate"
-  "contact .";
-  grid-gap: 3em;
-  max-width: 1000px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.contact-form {
-  grid-area: contact;
-  background: #E5E5E5;
-  padding: 2em 2em;
+.left, .right{
+  width: 40vw;
+  max-width: 30em;
+  margin: 3em 1em;
 }
 
-#mc_embed_signup {
-  grid-area: signup;
-  margin: 0;
+.contact-form, .donate, #mc_embed_signup_scroll {
+  padding: 2em;
+  background: #DEDEDE;
+  text-align: left;
 }
-
-.donate {
-  grid-area: donate;
-  background: #E5E5E5;
-  padding: 2em 2em;
-}
-
 
 /*** Contact Form ***/
 
 .contact-form p label {
-  font-size: 16px;
+  font-size: 1em;
   color: #555;
 }
 
@@ -47,16 +51,14 @@
   border-radius: 3px;
 }
 
-.contact-form p input.btn {
-  color: red;
+.contact-form .btn {
+  margin-top: 1em;
 }
 
 /*** Mailchimp Signup Form ***/
 
-#mc_embed_signup_scroll {
-  padding: 2em 1em;
-  width: 100%;
-  background: #E5E5E5;
+#mc_embed_signup {
+  margin-top: -0.65em;
 }
 
 #mc_embed_signup input.email {
@@ -66,4 +68,20 @@
 
 #subscribe-input {
   height: 50px;
+  max-width: 100%;
+}
+
+/*** Donate **/
+
+.donate p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .left, .right {
+    width: 100%;
+  }
+  #mc_embed_signup_scroll {
+    margin-top: -5.5em;
+  }
 }

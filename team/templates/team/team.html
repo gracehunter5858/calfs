@@ -5,22 +5,23 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'team/css/team.css' %}" />
 
-<div class="page-header">
+<!--div class="page-header">
   <h1> MEET THE TEAM </h1>
-</div>
+</div>-->
 
+<h1 class="title"> MEET THE TEAM </h1>
+<div class="member-card-grid">
 {% if members %}
-    <div class = "member-card-grid">
     {% for member in members %}
 
-    <div class = "card mw-25 mh-25 text-center p-1 m-2">
-          {% if member.photo %} <img class = "member-photo" src = "/team{{ member.photo.url }}">
-          {% else %} <img class = "card-img-top member-photo" src = "{% static 'team/images/cone_of_shame.jpg' %}"/> {% endif %}
-          <div class = "card-body">
-              <h5 class = "card-title"> {{ member.name }} </h5>
-              <p class = "card-subtitle"> {% if member.officer_position %} {{ member.get_officer_position_display }} {% endif %} </p>
+    <div class="card mw-25 mh-25 text-center p-1 m-2">
+          {% if member.photo %} <img class="member-photo" src = "/team{{ member.photo.url }}">
+          {% else %} <img class="card-img-top member-photo" src = "{% static 'team/images/cone_of_shame.jpg' %}"/> {% endif %}
+          <div class="card-body">
+              <h5 class="card-title"> {{ member.name }} </h5>
+              <p class="card-subtitle"> {% if member.officer_position %} {{ member.get_officer_position_display }} {% endif %} </p>
 
-              <span class = "info-label">Year:</span><span class = "card-text">{{ member.get_year_display }}</span><br/>
+              <span class="info-label">Year:</span><span class = "card-text">{{ member.get_year_display }}</span><br/>
 
               {% if member.major_1 %}<span class = "info-label">Major:</span><span class = "card-text">{{ member.major_1}}
                 {% if member.major_2 %} / {{ member.major_2}} {% endif %} </span><br/>{% endif %}
