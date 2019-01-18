@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 {% load custom_tags %}
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
 
-  {% show_banner %}
+  <!-- To include current news/templates/news/banner.html as a banner on the page {% show_banner %} -->
 
-  <h3> WELCOME TO </h3>
-  <h1> CAL FIGURE SKATING </h1>
+<div class="join-page-body">
+  <div class="page-body">
+    <img class="team-photo" src="{% static 'images/team-group-photo.jpg' %}">
+    <div class="title-background">
+      <h3 class="subtitle"> WELCOME TO </h3>
+      <h1 class="title"> CAL FIGURE SKATING </h1>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}

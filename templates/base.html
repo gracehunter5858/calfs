@@ -13,21 +13,35 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
-  <header class="p-1">
-    <a class="logo p-2" href="/"><img src="{% static 'images/cal_figure_skating_gold_horizontal.png'%}" width="250px"></a>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2" href="/join">Join</a>
-        <a class="p-2" href="/about">About Us</a>
-        <a class="p-2" href="/team">Our Team</a>
-        <a class="p-2" href="/gallery">Gallery</a>
-        <a class="p-2" href="/contact">Contact</a>
-    </nav>
+  <header>
+    <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="/"><img src="{% static 'images/cal_figure_skating_gold_horizontal.png'%}" width="250px"></a>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" id="calfs-nav-link" href="/join">JOIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="calfs-nav-link" href="/about">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="calfs-nav-link" href="/team">OUR TEAM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="calfs-nav-link" href="/gallery">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="calfs-nav-link" href="/contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   </header>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
 {% block content %}
 {% endblock %}

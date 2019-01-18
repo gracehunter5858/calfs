@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}" />
 
   <h1> ABOUT US </h1>
+
+<div class="about-page-body">
+  <img src="{% static 'images/IMG_3334.jpg'%}" class="about-img">
+
+  <div class="about-text">
+    <p>Cal Figure Skating welcomes members from all backgrounds, from those trying skating for the first time
+    to experienced competitors looking to continue their skating careers in college. No experience is required!</p>
+    <p>Our competitive team travels to three sectional intercollegiate competitions each year, and has qualified
+    for the National Intercollegiate Championships every year since 2011. We are the 2018 and 2015
+    Pacific Coast Sectional Champions, and the 2015 National Pewter Medalists.</p>
+    <p>For recreational members, we offer coaching from experienced skaters and the chance to perform in our semesterly
+    Skate Night fundraisers, as well as the opportunity to make some great friends and lasting memories along the way.</p>
+  </div>
+</div>
 
 {% endblock %}
