@@ -20,12 +20,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5_vm0*_(*1@tbrvj-v*1p3a6^(1_7)fw+hsx518o77(9c*2j+a'
+import os
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1",
+".figureskating-berkeley-edu.apphost.ocf.berkeley.edu/",
+".figureskating.berkeley.edu"]
 
 
 # Application definition
@@ -103,6 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+ADMINS = (('Calfs','ucbfigureskating@gmail.com'))
+MANAGERS = ADMINS
 
 
 # Internationalization
